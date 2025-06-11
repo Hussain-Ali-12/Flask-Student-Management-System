@@ -79,7 +79,6 @@
           <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
           <li class="nav-item">
             <form action="{{ url_for('logout') }}" method="post" class="d-inline">
-              {{ csrf_token() }}
               <button type="submit" class="btn btn-link nav-link" style="display:inline; border:none; background:none;">
                 Logout
               </button>
