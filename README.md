@@ -15,61 +15,22 @@ A secure, CRUD-based web application built with Flask, SQLAlchemy, Flask-WTF, an
 
 ---
 
-## 📁 Project Structure
-
-```
-student-management-system/
-├── app.py
-├── Dockerfile
-├── requirements.txt
-├── .env               # (optional) for environment variables
-├── students.db        # created automatically (SQLite)
-├── templates/
-│   ├── login.html
-│   ├── dashboard.html
-│   └── update.html
-├── static/            # (optional CSS/JS assets)
-└── README.md
-```
-
----
-
-## ⚙️ Environment Variables
-
-Create a `.env` file in the root directory:
-
-```
-SECRET_KEY=your_secure_secret_key
-```
-
-In `app.py`, make sure to load it:
-
-```python
-import os
-from dotenv import load_dotenv
-
-load_dotenv()
-app.secret_key = os.getenv('SECRET_KEY', 'fallback_secret_key')
-```
-
----
-
 ## 💻 Run Locally Without Docker
 
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/student-management-system.git
-cd student-management-system
+git clone https://github.com/Hussain-Ali-12/Flask-Student-Management-System.git
+cd Flask-Student-Management-System
 ```
 
 ### 2. Create a virtual environment
 
 ```bash
-python -m venv venv
+python -m venv env
 # Activate:
-source venv/bin/activate         # On macOS/Linux
-venv\Scripts\activate            # On Windows
+source env/bin/activate         # On macOS/Linux
+env\Scripts\activate            # On Windows
 ```
 
 ### 3. Install dependencies
@@ -104,7 +65,7 @@ docker run -p 5000:5000 flask-students-app
 
 Now access the app at: [http://localhost:5000](http://localhost:5000)
 
-### 3. Stop & remove container
+### 3. Stop & remove container 
 
 ```bash
 docker stop flask-students-app
