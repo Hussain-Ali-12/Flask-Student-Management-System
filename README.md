@@ -93,13 +93,13 @@ Visit: [http://localhost:5000](http://localhost:5000)
 ### 1. Build Docker image
 
 ```bash
-docker build -t sms-app .
+docker build -t flask-students-app .
 ```
 
 ### 2. Run container
 
 ```bash
-docker run -d -p 5000:5000 --name sms-container sms-app
+docker run -p 5000:5000 flask-students-app
 ```
 
 Now access the app at: [http://localhost:5000](http://localhost:5000)
@@ -107,8 +107,8 @@ Now access the app at: [http://localhost:5000](http://localhost:5000)
 ### 3. Stop & remove container
 
 ```bash
-docker stop sms-container
-docker rm sms-container
+docker stop flask-students-app
+docker rm flask-students-app
 ```
 
 ---
