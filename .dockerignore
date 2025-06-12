@@ -3,7 +3,6 @@ __pycache__/
 *.pyo
 *.pyd
 env/
-venv/
 instance/
 *.db
 *.sqlite3
@@ -11,3 +10,5 @@ instance/
 .env
 .git
 .gitignore
+.gitattributes
+logs/

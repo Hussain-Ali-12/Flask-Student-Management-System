@@ -64,7 +64,7 @@
 </head>
 <body>
 
-<!-- Navigation Bar -->
+  <!-- Navigation Bar -->
 <nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
     <a class="navbar-brand d-flex align-items-center" href="/dashboard">
@@ -88,6 +88,19 @@
     </div>
   </div>
 </nav>
+
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      <div class="container mt-3">
+        {% for category, message in messages %}
+          <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  {% endwith %}
 
 <!-- Update Form Container -->
 <div class="container update-container">

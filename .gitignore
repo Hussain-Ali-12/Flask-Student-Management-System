@@ -69,3 +69,9 @@ __wsgi__/
 
 # MacOS
 .DS_Store
+
+# Git 
+.gitignore
+.gitattributes
+
+logs/
