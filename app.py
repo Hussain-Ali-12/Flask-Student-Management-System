@@ -220,6 +220,16 @@ def server_error(e):
     flash(f"500 Server Error — Error ID: {error_id}", "danger")
     return render_template("error.html", code=500, message="An internal error occurred.", error_id=error_id), 500
 
+# =========================
+# Session Management
+# =========================
+
+@app.route('/refresh-session', methods=['POST'])
+def refresh_session():
+    if 'admin' in session:
+        session.modified = True  # Updates session timestamp
+        return '', 204  # No content
+    return '', 401  # Unauthorized
 
 # =========================
 # Run the App
